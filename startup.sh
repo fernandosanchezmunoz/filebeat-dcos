@@ -9,4 +9,6 @@ fi
 
 sed -i -e "s/ELASTIC_HOST:ELASTIC_PORT/$ELASTIC_HOST:$ELASTIC_PORT/g" /etc/filebeat.yaml
 
+/usr/bin/journalctl --vacuum-size=10M
+
 /bin/dcos-journalctl-filebeat.sh

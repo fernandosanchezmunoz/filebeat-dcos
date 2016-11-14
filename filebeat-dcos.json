@@ -28,7 +28,7 @@
   "container": {
     "docker": {
       "image": "fernandosanchez/filebeat-dcos",
-      "forcePullImage": false,
+      "forcePullImage": true,
       "privileged": false,
       "network": "HOST"
     },
