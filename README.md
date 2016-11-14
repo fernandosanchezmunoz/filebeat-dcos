@@ -1,1 +1,1 @@
-# filebeat_dcos
+# filebeat-dcos
