@@ -7,7 +7,7 @@ if [ -z "$ELASTIC_PORT" ]; then
   ELASTIC_PORT=9200
 fi
 
-sed -i -e "s/ELASTIC_HOST:ELASTIC_PORT/$ELASTIC_HOST:$ELASTIC_PORT/g" /etc/filebeat.yml
+sed -i -e "s/ELASTIC_HOST:ELASTIC_PORT/$ELASTIC_HOST:$ELASTIC_PORT/g" /etc/filebeat/filebeat.yml
 
 /usr/bin/journalctl --vacuum-size=10M
 
