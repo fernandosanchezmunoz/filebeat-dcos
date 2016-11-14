@@ -7,4 +7,4 @@ filebeat.prospectors:
     - /var/log/dcos/dcos.log
 tail_files: true
 output.elasticsearch:
-  hosts: ["$ELASTIC_HOST:$ELASTIC_PORT"]
+  hosts: ["ELASTIC_HOST:ELASTIC_PORT"]
