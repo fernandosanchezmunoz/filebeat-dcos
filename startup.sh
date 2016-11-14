@@ -1,4 +1,4 @@
-tee /usr/local/bin/dcos-journalctl-filebeat.sh<-EOF 
+tee /dcos-journalctl-filebeat.sh<-EOF 
 #!/bin/bash
 /usr/bin/journalctl --no-tail -f \
   -u dcos-3dt.service 				 \
@@ -60,5 +60,5 @@ output.elasticsearch:
   hosts: ["$ELASTIC_HOST:$ELASTIC_PORT"]
 EOF
 
-chmod 0755 /usr/local/bin/dcos-journalctl-filebeat.sh
-/usr/local/bin/dcos-journalctl-filebeat.sh
+chmod 0755 /dcos-journalctl-filebeat.sh
+/bin/dcos-journalctl-filebeat.sh

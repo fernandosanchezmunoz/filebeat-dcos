@@ -42,7 +42,7 @@
       {
         "containerPath": "/var/log",
         "hostPath": "/var/log",
-        "mode": "RO"
+        "mode": "RW"
       }
     ]
   },
