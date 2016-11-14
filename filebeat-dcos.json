@@ -40,6 +40,11 @@
         "mode": "RO"
       },
       {
+        "containerPath": "/var/log/mesos",
+        "hostPath": "/var/log/mesos",
+        "mode": "RO"
+      },
+      {
         "containerPath": "/var/log/dcos",
         "hostPath": "/var/log/dcos",
         "mode": "RO"
