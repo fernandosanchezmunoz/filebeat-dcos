@@ -8,7 +8,7 @@
     "ELASTIC_HOST": "172.31.21.51",
     "ELASTIC_PORT": "9200"
   },
-  "instances": 4,
+  "instances": 256,
   "cpus": 0.1,
   "mem": 128,
   "disk": 0,
