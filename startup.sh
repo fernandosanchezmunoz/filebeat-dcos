@@ -9,6 +9,9 @@ fi
 
 sed -i -e "s/ELASTIC_HOST:ELASTIC_PORT/$ELASTIC_HOST:$ELASTIC_PORT/g" /etc/filebeat/filebeat.yml
 
-/usr/bin/journalctl --vacuum-size=10M
+#/usr/bin/journalctl --vacuum-size=10M &
 
-/bin/dcos-journalctl-filebeat.sh
+#/bin/dcos-journalctl-filebeat.sh &
+
+#start filebeat
+/usr/share/filebeat/bin/filebeat -c /etc/filebeat/filebeat.yml -path.home /usr/share/filebeat -path.config /etc/filebeat -path.data /var/lib/filebeat -path.logs /var/log/filebeat

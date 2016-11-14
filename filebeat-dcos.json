@@ -40,9 +40,9 @@
         "mode": "RO"
       },
       {
-        "containerPath": "/var/log",
-        "hostPath": "/var/log",
-        "mode": "RW"
+        "containerPath": "/var/log/dcos",
+        "hostPath": "/var/log/dcos",
+        "mode": "RO"
       }
     ]
   },
@@ -50,7 +50,7 @@
     {
       "protocol": "COMMAND",
       "command": {
-        "value": "ps -Aef|grep dcos-journalctl-filebeat"
+        "value": "ps -Aef|filebeat"
       },
       "gracePeriodSeconds": 300,
       "intervalSeconds": 60,

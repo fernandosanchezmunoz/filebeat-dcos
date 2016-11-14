@@ -15,7 +15,4 @@ RUN curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-5.
 	mkdir -p /var/log/dcos && \
 	chmod 0755 /usr/bin/dcos-journalctl-filebeat.sh
 
-#volume 1: /var/lib/mesos to /var/lib/mesos
-#volume 2: /var/log/ to /var/log/
-
 CMD /startup.sh
