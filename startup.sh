@@ -11,6 +11,8 @@ sed -i -e "s/ELASTIC_HOST:ELASTIC_PORT/$ELASTIC_HOST:$ELASTIC_PORT/g" /etc/fileb
 
 #/usr/bin/journalctl --vacuum-size=10M &
 
+#Ideally this should be able to get the logs from running instances of DC/OS service into /var/log/dcos.log.
+#Currently not working (journalctl inside a container doesn't seem to work)
 #/bin/dcos-journalctl-filebeat.sh &
 
 #start filebeat
