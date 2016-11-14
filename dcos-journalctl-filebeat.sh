@@ -1,3 +1,6 @@
+#!/bin/bash
+#This should be able to log all those services to /var/log/dcos. 
+#Not working as journalctl inside a container can't really access the services outside it.
 /usr/bin/journalctl --no-tail -f \
   -u dcos-3dt.service 				 \
   -u dcos-3dt.socket				 \
