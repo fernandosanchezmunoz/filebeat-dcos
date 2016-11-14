@@ -1,4 +1,4 @@
-sudo tee /usr/bin/dcos-journalctl-filebeat.sh<-EOF 
+tee /usr/bin/dcos-journalctl-filebeat.sh<-EOF 
 #!/bin/bash
 /usr/bin/journalctl --no-tail -f \
   -u dcos-3dt.service 				 \
@@ -45,9 +45,9 @@ sudo tee /usr/bin/dcos-journalctl-filebeat.sh<-EOF
   > /var/log/dcos/dcos.log 2>&1
 EOF
 
-sudo mkdir -p /var/log/dcos
+mkdir -p /var/log/dcos
 
-sudo tee /etc/filebeat/filebeat.yml <<-EOF 
+tee /etc/filebeat/filebeat.yml <<-EOF 
 filebeat.prospectors:
 - input_type: log
   paths:
@@ -60,5 +60,5 @@ output.elasticsearch:
   hosts: ["$ELASTIC_HOST:$ELASTIC_PORT"]
 EOF
 
-sudo chmod 0755 /usr/bin/dcos-journalctl-filebeat.sh
-sudo /usr/bin/dcos-journalctl-filebeat.sh
+chmod 0755 /usr/bin/dcos-journalctl-filebeat.sh
+/usr/bin/dcos-journalctl-filebeat.sh
